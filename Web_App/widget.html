@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>widget</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>  
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="font/Inter/static/Inter-Regular.ttf">
+            <link rel="stylesheet" href="font/Inter/static/Inter-Medium.ttf">
+            <link rel="stylesheet" href="font/Inter/static/Inter-SemiBold.ttf">
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="style/css.css">
+            <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <!-- start nav bar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid" id="navbk">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12" id="logo">
+					<a>
+						<svg width="218" height="61" viewBox="0 0 218 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="29.6985" width="42" height="42" rx="10" transform="rotate(-45 0 29.6985)" fill="#245EE0"/>
+						<rect x="15.627" y="30.3849" width="42" height="42" rx="10" transform="rotate(-45 15.627 30.3849)" fill="#245EE0" fill-opacity="0.25"/>
+						<path d="M34.3336 25.7918V22.5418C34.3336 20.1485 32.3935 18.2084 30.0002 18.2084C27.607 18.2084 25.6669 20.1485 25.6669 22.5418V25.7918M20.8916 27.2564L20.2416 34.1897C20.0568 36.1611 19.9644 37.1467 20.2915 37.9081C20.5788 38.5769 21.0824 39.1298 21.7214 39.4784C22.4489 39.8751 23.4389 39.8751 25.4189 39.8751H34.5816C36.5616 39.8751 37.5516 39.8751 38.279 39.4784C38.9181 39.1298 39.4217 38.5769 39.709 37.9081C40.0361 37.1467 39.9437 36.1611 39.7589 34.1897L39.1089 27.2564C38.9528 25.5917 38.8748 24.7594 38.5004 24.1301C38.1707 23.5759 37.6836 23.1323 37.101 22.8558C36.4396 22.5418 35.6036 22.5418 33.9316 22.5418L26.0689 22.5418C24.3969 22.5418 23.5609 22.5418 22.8994 22.8558C22.3169 23.1323 21.8297 23.5759 21.5 24.1301C21.1257 24.7594 21.0476 25.5917 20.8916 27.2564Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M21.2 25.1759C21.6 23.2508 22.1441 23.0303 22.4 22.8657C22.6559 22.7012 24 22.4807 24.8 22.4807L35.2 22.0957C37.44 21.7877 38.4 22.8657 38.8 23.6358C39.2 24.4059 40 35.4947 40 36.7268C40 37.9589 38.4 38.7803 37.6 39.037H24.8C21.402 39.1136 20 38.2669 20 36.3418C20 34.4166 20.88 26.716 21.2 25.1759Z" fill="white" fill-opacity="0.25"/>
+						<path d="M89.6776 42.5417V17.8145H105.518V21.5694H94.157V28.2825H104.432V32.0375H94.157V42.5417H89.6776ZM114.662 42.916C113.487 42.916 112.428 42.7068 111.486 42.2882C110.553 41.8616 109.812 41.2337 109.265 40.4047C108.726 39.5756 108.456 38.5533 108.456 37.3379C108.456 36.2915 108.649 35.4262 109.035 34.742C109.422 34.0578 109.949 33.5105 110.617 33.1C111.285 32.6895 112.038 32.3796 112.875 32.1703C113.72 31.953 114.593 31.796 115.495 31.6994C116.582 31.5867 117.463 31.4861 118.139 31.3976C118.815 31.301 119.306 31.1561 119.612 30.9629C119.926 30.7617 120.083 30.4518 120.083 30.0332V29.9608C120.083 29.0512 119.813 28.3469 119.274 27.8479C118.735 27.3488 117.958 27.0993 116.944 27.0993C115.873 27.0993 115.024 27.3327 114.396 27.7996C113.776 28.2664 113.358 28.8178 113.141 29.4537L109.06 28.8741C109.382 27.7472 109.913 26.8055 110.653 26.0488C111.394 25.2842 112.299 24.7127 113.37 24.3344C114.441 23.948 115.624 23.7548 116.92 23.7548C117.813 23.7548 118.703 23.8595 119.588 24.0687C120.473 24.278 121.282 24.6241 122.015 25.1071C122.747 25.582 123.335 26.23 123.778 27.051C124.228 27.872 124.454 28.8983 124.454 30.1298V42.5417H120.252V39.9942H120.107C119.842 40.5093 119.467 40.9923 118.984 41.443C118.509 41.8857 117.91 42.2439 117.185 42.5176C116.469 42.7832 115.628 42.916 114.662 42.916ZM115.797 39.7044C116.674 39.7044 117.435 39.5313 118.079 39.1852C118.723 38.831 119.218 38.3642 119.564 37.7846C119.918 37.2051 120.095 36.5732 120.095 35.889V33.7037C119.958 33.8164 119.725 33.921 119.395 34.0176C119.073 34.1142 118.711 34.1987 118.308 34.2712C117.906 34.3436 117.507 34.408 117.113 34.4643C116.718 34.5207 116.376 34.569 116.087 34.6092C115.435 34.6978 114.851 34.8426 114.336 35.0439C113.821 35.2451 113.414 35.5268 113.116 35.889C112.819 36.2432 112.67 36.702 112.67 37.2655C112.67 38.0704 112.964 38.6781 113.551 39.0886C114.139 39.4991 114.887 39.7044 115.797 39.7044ZM143.591 28.8983L139.607 29.3329C139.494 28.9305 139.297 28.5522 139.015 28.198C138.742 27.8438 138.371 27.5581 137.905 27.3408C137.438 27.1234 136.866 27.0148 136.19 27.0148C135.281 27.0148 134.516 27.212 133.896 27.6064C133.284 28.0008 132.982 28.5119 132.991 29.1398C132.982 29.6791 133.18 30.1177 133.582 30.4558C133.993 30.7939 134.669 31.0716 135.611 31.2889L138.774 31.965C140.529 32.3434 141.833 32.943 142.686 33.764C143.547 34.5851 143.982 35.6596 143.99 36.9878C143.982 38.1549 143.64 39.1852 142.964 40.0787C142.295 40.9641 141.366 41.6563 140.174 42.1554C138.983 42.6544 137.615 42.904 136.069 42.904C133.799 42.904 131.972 42.4291 130.588 41.4792C129.203 40.5214 128.378 39.1892 128.113 37.4828L132.375 37.0723C132.568 37.9094 132.978 38.5413 133.606 38.9679C134.234 39.3945 135.051 39.6078 136.057 39.6078C137.096 39.6078 137.929 39.3945 138.557 38.9679C139.192 38.5413 139.51 38.014 139.51 37.3862C139.51 36.855 139.305 36.4163 138.895 36.0702C138.492 35.724 137.864 35.4584 137.011 35.2733L133.848 34.6092C132.069 34.239 130.753 33.6151 129.9 32.7378C129.046 31.8524 128.624 30.7335 128.632 29.3812C128.624 28.2382 128.934 27.2482 129.562 26.4111C130.197 25.5659 131.079 24.9139 132.206 24.4551C133.341 23.9882 134.649 23.7548 136.13 23.7548C138.303 23.7548 140.013 24.2176 141.261 25.1433C142.517 26.069 143.294 27.3206 143.591 28.8983ZM152.05 31.6753V42.5417H147.679V17.8145H151.953V27.1476H152.17C152.605 26.1012 153.277 25.2761 154.187 24.6724C155.104 24.0607 156.271 23.7548 157.688 23.7548C158.976 23.7548 160.099 24.0245 161.057 24.5638C162.015 25.1031 162.755 25.8919 163.278 26.9302C163.81 27.9686 164.075 29.2363 164.075 30.7335V42.5417H159.704V31.4096C159.704 30.162 159.382 29.1921 158.739 28.4998C158.103 27.7996 157.209 27.4494 156.058 27.4494C155.285 27.4494 154.593 27.6185 153.981 27.9565C153.378 28.2865 152.903 28.7655 152.557 29.3933C152.219 30.0212 152.05 30.7818 152.05 31.6753ZM168.615 42.5417V23.9963H172.986V42.5417H168.615ZM170.813 21.3642C170.121 21.3642 169.525 21.1348 169.026 20.676C168.527 20.2091 168.277 19.6497 168.277 18.9977C168.277 18.3377 168.527 17.7783 169.026 17.3194C169.525 16.8526 170.121 16.6192 170.813 16.6192C171.513 16.6192 172.109 16.8526 172.6 17.3194C173.099 17.7783 173.348 18.3377 173.348 18.9977C173.348 19.6497 173.099 20.2091 172.6 20.676C172.109 21.1348 171.513 21.3642 170.813 21.3642ZM185.655 42.904C183.844 42.904 182.274 42.5055 180.946 41.7087C179.618 40.9118 178.588 39.797 177.855 38.3642C177.131 36.9314 176.769 35.2572 176.769 33.3415C176.769 31.4257 177.131 29.7475 177.855 28.3067C178.588 26.8658 179.618 25.747 180.946 24.9501C182.274 24.1533 183.844 23.7548 185.655 23.7548C187.466 23.7548 189.036 24.1533 190.364 24.9501C191.692 25.747 192.718 26.8658 193.443 28.3067C194.175 29.7475 194.541 31.4257 194.541 33.3415C194.541 35.2572 194.175 36.9314 193.443 38.3642C192.718 39.797 191.692 40.9118 190.364 41.7087C189.036 42.5055 187.466 42.904 185.655 42.904ZM185.679 39.4025C186.661 39.4025 187.482 39.1329 188.142 38.5936C188.802 38.0462 189.293 37.3138 189.615 36.3962C189.945 35.4785 190.11 34.4563 190.11 33.3294C190.11 32.1944 189.945 31.1682 189.615 30.2506C189.293 29.3249 188.802 28.5884 188.142 28.041C187.482 27.4937 186.661 27.22 185.679 27.22C184.673 27.22 183.836 27.4937 183.168 28.041C182.508 28.5884 182.013 29.3249 181.683 30.2506C181.361 31.1682 181.2 32.1944 181.2 33.3294C181.2 34.4563 181.361 35.4785 181.683 36.3962C182.013 37.3138 182.508 38.0462 183.168 38.5936C183.836 39.1329 184.673 39.4025 185.679 39.4025ZM202.707 31.6753V42.5417H198.336V23.9963H202.514V27.1476H202.731C203.158 26.1092 203.838 25.2842 204.772 24.6724C205.713 24.0607 206.876 23.7548 208.261 23.7548C209.541 23.7548 210.656 24.0285 211.605 24.5758C212.563 25.1232 213.304 25.916 213.827 26.9544C214.358 27.9927 214.62 29.2524 214.612 30.7335V42.5417H210.241V31.4096C210.241 30.1701 209.919 29.2001 209.275 28.4998C208.639 27.7996 207.758 27.4494 206.631 27.4494C205.866 27.4494 205.186 27.6185 204.59 27.9565C204.003 28.2865 203.54 28.7655 203.202 29.3933C202.872 30.0212 202.707 30.7818 202.707 31.6753Z" fill="#344054"/>
+						</svg>	
+					</a>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 mgr">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="col-lg-4">
+								<a href="Index.html">Home</a>
+							</div>
+							<div class="col-lg-4">
+								<a href="women.html">Women</a>
+							</div>
+							<div class="col-lg-4">
+								<a href="men.html">Men</a>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="col-lg-4">
+								<a href="kid.html">Kids</a>
+							</div>
+							<div class="col-lg-4">
+								<a href="discount.html">Discount</a>
+							</div>
+							<div class="col-lg-4">
+								<a href="home.html">About</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 mgr">
+					<div class="row">
+						<div class="col-lg-2">
+							
+						</div>
+						<div class="col-lg-2">
+							<a href="#">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11.0013 0C7.14359 0 4.00257 3.1409 4.00257 6.99844C4.00257 8.67457 4.59046 10.2107 5.57728 11.4166L0 16.9922L1.00712 18L6.58369 12.4229C7.82915 13.444 9.39078 14.0004 11.0013 13.9969C14.859 13.9969 18 10.856 18 6.99844C18 3.1409 14.859 0 11.0013 0ZM11.0013 1.39969C14.1017 1.39969 16.6003 3.89813 16.6003 6.99844C16.6003 10.0988 14.1017 12.5972 11.0013 12.5972C7.90085 12.5972 5.40231 10.0988 5.40231 6.99844C5.40231 3.89813 7.90085 1.39969 11.0013 1.39969Z" fill="#344054"/>
+								</svg>
+							</a>
+						</div>
+						<div class="col-lg-2">
+							<a href="#"><i class="fa fa-heart-o"></i></a>
+						</div>
+						<div class="col-lg-2">
+							<a href="#">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 2H3.30616C3.55218 2 3.67519 2 3.77418 2.04524C3.86142 2.08511 3.93535 2.14922 3.98715 2.22995C4.04593 2.32154 4.06333 2.44332 4.09812 2.68686L4.57143 6M4.57143 6L5.62332 13.7314C5.75681 14.7125 5.82355 15.2031 6.0581 15.5723C6.26478 15.8977 6.56108 16.1564 6.91135 16.3174C7.30886 16.5 7.80394 16.5 8.79411 16.5H17.352C18.2945 16.5 18.7658 16.5 19.151 16.3304C19.4905 16.1809 19.7818 15.9398 19.9923 15.6342C20.2309 15.2876 20.3191 14.8247 20.4955 13.8988L21.8191 6.94969C21.8812 6.62381 21.9122 6.46087 21.8672 6.3335C21.8278 6.22177 21.7499 6.12768 21.6475 6.06802C21.5308 6 21.365 6 21.0332 6H4.57143ZM10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM18 21C18 21.5523 17.5523 22 17 22C16.4477 22 16 21.5523 16 21C16 20.4477 16.4477 20 17 20C17.5523 20 18 20.4477 18 21Z" stroke="#344054" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</a>
+						</div>
+						<div class="col-lg-2">
+							<div class="dropdown">
+								<a href="#"><i class="fa fa-user-o"></i></a>
+								<div class="dropdown-content">
+									<a class="trigger-new" href="#">Log In</a>
+									<a class="trigger-sign-up" href="#">Sign Up</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-2">
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+  	<!-- end nav nar -->
+    <div class="container-fluid" style="width: 1350px; margin-right: 80px; margin-top: 20px; margin-bottom: 30px;">
+		<div class="row">
+			<div class="img-contain">
+				<div class="col-lg-6">
+					<div id="img">
+
+					</div>
+					<div id="footbar">
+
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div id="Head">
+						<!-- <h2>Lady Printed Crop T-Shirt</h2> -->
+					</div>
+					<div class="fa fa-star" id="star"><span id="num">4.5</span><span style="font-size:12px;color: rgba(52, 64, 84, 0.8);font-family: 'Inter';">(86)</span></div>
+					<div>
+						<label for="number" class="size">Size</label>
+						<a href="#" class="all-size">S</a>
+						<a href="#" class="all-size">M</a>
+						<a href="#" class="all-size">L</a>
+						<a href="#" class="all-size">XL</a>
+						<a href="#" class="all-size">XXL</a>
+					</div>
+					<div>
+						<label for="number" class="size">Color</label>
+						<a href="#" class="o-color">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						<a href="#" class="o-color" style="background: #7CCFED;">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						<a href="#" class="o-color" style="background: rgba(255, 185, 85, 0.9);">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<label for="number" class="size">Qty</label>
+							<span class="sub-num fa fa-chevron-left input-number-decrement"></span>
+							<input class="input-number" type="text" value="1" min="0" max="10">
+							<span class="sub-num fa fa-chevron-right input-number-increment" class=""></span>
+						</div>
+						
+					</div>
+					<div>
+						<label for="number" class="size">Price</label>
+						<div><span class="Pri-detail">US $12.00</span><del class="price">%15.00</del></div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3">
+							<button class="but-detail" onclick="alert('comming soon!')">
+								<span>
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2 2H3.30616C3.55218 2 3.67519 2 3.77418 2.04524C3.86142 2.08511 3.93535 2.14922 3.98715 2.22995C4.04593 2.32154 4.06333 2.44332 4.09812 2.68686L4.57143 6M4.57143 6L5.62332 13.7314C5.75681 14.7125 5.82355 15.2031 6.0581 15.5723C6.26478 15.8977 6.56108 16.1564 6.91135 16.3174C7.30886 16.5 7.80394 16.5 8.79411 16.5H17.352C18.2945 16.5 18.7658 16.5 19.151 16.3304C19.4905 16.1809 19.7818 15.9398 19.9923 15.6342C20.2309 15.2876 20.3191 14.8247 20.4955 13.8988L21.8191 6.94969C21.8812 6.62381 21.9122 6.46087 21.8672 6.3335C21.8278 6.22177 21.7499 6.12768 21.6475 6.06802C21.5308 6 21.365 6 21.0332 6H4.57143ZM10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM18 21C18 21.5523 17.5523 22 17 22C16.4477 22 16 21.5523 16 21C16 20.4477 16.4477 20 17 20C17.5523 20 18 20.4477 18 21Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span> Add to Cart
+							</button>
+						</div>
+						<div class="col-lg-3">
+							<a href="#" class="small-box">
+								<span class="fa fa-heart-o"></span>
+							</a>
+						</div>
+					</div>
+					<div style="margin-bottom: 4px;margin-top: 4px;">
+						<p><u>Code.TE0005733</u><br>Round neck T-shirt with long sleeves featuring text embroidered on chest.</p>
+					</div>
+					<button type="button" class="box-detail" onclick="boxdetail()">Online exchange policy<span class="fa fa-chevron-down" style="margin-left: 380px;"></span></button>
+					<div id="detail-select" style="display: none;">
+						<p>- Return within 14 days of purchase with original hangtags and a valid receipt.</p>
+						<p>- All items can be exchanged to different sizes, colors or other items but there's no refund in cash.</p>	
+					</div>
+				</div>
+			</div>	
+        </div>
+    </div>
+
+	<!-- women all card-->
+	<div class="container-fluid" style="width: 1370px; margin-right: 80px; margin-top: 20px; margin-bottom: 30px;">
+		<div class="row">
+			<div class="col-lg-3" style="width: 300px; margin-right: 42px;"> 
+				<div id="cart">
+					<img src="image/NewWomen/6.svg" width="302px" height="397px" style="margin-top: -15px;">
+					<div>
+						<p class="detail">Sleeves-Printed-T-Shirt <span class="fa fa-heart-o" style="padding-left: 110px;color: #245EE0;"></span></p>
+						<div class="fa fa-star" id="star"><span id="num">4.5</span><span style="font-size:12px;color: rgba(52, 64, 84, 0.8);font-family: 'Inter';">(86)</span></div>
+						<div><span  class="Us">US $12.00</span><del class="price">%15.00</del></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3" style="width: 302px; margin-right: 42px;">
+				<div id="cart">
+					<img src="image/NewWomen/2.svg" width="302px" height="397px" style="margin-top: -15px;">
+					<div>
+						<p class="detail">Sleeves-Printed-T-Shirt <span class="fa fa-heart-o" style="padding-left: 110px;color: #245EE0;"></span></p>
+						<div class="fa fa-star" id="star"><span id="num">4.5</span><span style="font-size:12px;color: rgba(52, 64, 84, 0.8);font-family: 'Inter';">(86)</span></div>
+						<div><span  class="Us">US $12.00</span><del class="price">%15.00</del></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3" style="width: 300px; margin-right: 42px;">
+				<div id="cart">
+					<img src="image/NewWomen/7.svg" width="302px" height="397px" style="margin-top: -15px;">
+					<div>
+						<p class="detail">Sleeves-Printed-T-Shirt <span class="fa fa-heart-o" style="padding-left: 110px;color: #245EE0;"></span></p>
+						<div class="fa fa-star" id="star"><span id="num">4.5</span><span style="font-size:12px;color: rgba(52, 64, 84, 0.8);font-family: 'Inter';">(86)</span></div>
+						<div><span  class="Us">US $12.00</span><del class="price">%15.00</del></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3" style="width: 300px; margin-right: 42px;">
+				<div id="cart">
+					<img src="image/NewWomen/3.svg" width="302px" height="397px" style="margin-top: -15px;">
+					<div>
+						<p class="detail">Sleeves-Printed-T-Shirt <span class="fa fa-heart-o" style="padding-left: 110px;color: #245EE0;"></span></p>
+						<div class="fa fa-star" id="star"><span id="num">4.5</span><span style="font-size:12px;color: rgba(52, 64, 84, 0.8);font-family: 'Inter';">(86)</span></div>
+						<div><span  class="Us">US $12.00</span><del class="price">%15.00</del></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- futter -->
+  	<div class="container-fluid" style="width: 89%; margin-top: 2%;">
+		<div class="row">
+			<div class="col-lg-12 fterbk" style="padding-bottom: 20%;">
+				<div class="row">
+					<div class="col-lg-3">
+						<img src="image/Logo.svg" style="margin-left: 35px;">
+						<p style="margin-left: 35px;">Design amazing digital experiences that <br>create more happy in the world.</p>
+					</div>
+			
+					<div class="col-lg-6">
+
+					</div>
+					<div class="col-lg-3 text-center">
+						<a href="" class="getapp">Get the app</a>
+						<div style="margin-bottom: 16px; margin-top: 16px;">
+							<img src="image/Mobileappstorebadge.svg" style="padding-left: 35px;">
+						</div>
+						<div>
+							<img src="image/android.svg" style="padding-left: 35px;">
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="col-lg-4" style="margin-left: 20px;">
+							<a id="blogfter" class="trigger-contact-us" href="#">Contact us</a>
+						</div>
+						<div class="col-lg-3">
+							<a id="blogfter">Careers</a>
+						</div>
+						<div class="col-lg-2">
+							<a id="blogfter">Help</a>
+						</div>
+						<div class="col-lg-2">
+							<a id="blogfter">Privacy</a>
+						</div>
+					</div>
+					<div class="col-lg-3">
+
+					</div>
+					<div class="col-lg-3">
+						
+					</div>
+					<div class="col-lg-3">
+					</div>
+					<div class="col-lg-12" style="margin-left: 20px;">
+						<hr/>
+						<p style="margin-left: 10px; font-family: 'Inter'; font-weight: 600px; color:#98A2B3;">&#169;2022 Fashion. All right reserved.</p>
+					</div>
+				</div>
+				<br>
+				
+			</div>
+		</div>
+	</div>
+	<!-- modal log in -->
+	<div class="modal-new">
+		<div class="modal-content-new">
+			<div class="card cardlogin">
+				<div class="card-body">
+					<h4 class="mb-5 h4"> Log in to your account </h4>
+					<p id="p">Welcome back! Please enter your details.</p>
+
+					<div class="form-outline mb-4">
+						<label class="form-label colors" for="LogInEmail">Email</label>
+						<input type="email" id="LogInEmail" class="form-control form-control-lg colors" placeholder="Jonhny@gmail.com" style="height: 44px;"/>
+					</div>
+
+					<div class="form-outline mb-4" style="margin-top: 24px;">
+						<label class="form-label colors" for="LogInPassword">Password</label>
+						<input type="password" id="LogInPassword" class="form-control form-control-lg" placeholder="Your password" style="height: 44px;"/>
+						<span toggle="#LogInPassword" class="fa fa-fw fa-eye field-icon-cus toggle-password-cus"></span>
+					</div>
+
+					<!-- Checkbox -->
+					<div class="form-check d-flex justify-content-start mb-4">
+						<input class="form-check-input colors ch" type="checkbox" value="" id="Remember" checked/>
+						<label class="form-check-label colors" for="Remember" style="margin-top: 24px;"> Remember me </label>
+						<label class="form-check-label fp"> Forgot password </label>
+					</div>
+					<!-- submit button -->
+					<button class="btn btn-lg btn-block signin" type="submit" onclick="LogIn()" style="color: #FFFFFF; border-color: #D0D5DD;">Log in</button>
+					<button class="btn btn-lg btn-block" style="color:rgba(100, 100, 100, 0.9);
+					border-color: #D0D5DD;"
+						type="submit"><i class="me-2"></i>
+						<span style="margin-right: 4px;">
+							<svg style="margin-top: -4px;" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M19.6 10.2273C19.6 9.51825 19.5364 8.83643 19.4182 8.18188H10V12.0501H15.3818C15.15 13.3001 14.4455 14.3592 13.3864 15.0682V17.5773H16.6182C18.5091 15.8364 19.6 13.2728 19.6 10.2273Z" fill="#4285F4"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0001 19.9999C12.7001 19.9999 14.9637 19.1044 16.6183 17.5772L13.3864 15.0681C12.491 15.6681 11.3455 16.0226 10.0001 16.0226C7.39554 16.0226 5.19099 14.2635 4.40463 11.8999H1.06372V14.4908C2.70918 17.759 6.09099 19.9999 10.0001 19.9999Z" fill="#34A853"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M4.40455 11.8999C4.20455 11.2999 4.09091 10.659 4.09091 9.99994C4.09091 9.34085 4.20455 8.69994 4.40455 8.09994V5.50903H1.06364C0.386364 6.85903 0 8.38631 0 9.99994C0 11.6136 0.386364 13.1409 1.06364 14.4909L4.40455 11.8999Z" fill="#FBBC05"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0001 3.97727C11.4683 3.97727 12.7864 4.48182 13.8228 5.47273L16.691 2.60455C14.9592 0.990909 12.6955 0 10.0001 0C6.09099 0 2.70918 2.24091 1.06372 5.50909L4.40463 8.1C5.19099 5.73636 7.39554 3.97727 10.0001 3.97727Z" fill="#EA4335"/>
+							</svg>
+						</span> 
+						<span>
+							Sign up with Google
+						</span>
+					</button>
+					<div class="text-center">
+						<label class="form-check-label colors2">
+							<span class="colors">Don’t have an account?</span>
+							<span style="color: #245EE0; margin-left: 4px;font-weight: 600;">Sign up</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- sign up -->
+	<div class="modal-sign-up">
+		<div class="modal-content-sign-up">
+			<!-- <div class="card"> -->
+				<div class="card-body createnewacc">
+					<h2 class="h2"> Create an account </h2>
+					<p class="tegP1"> Please enter your details. </p>
+
+					<div class="form-outline mb-4">
+						<label class="form-label colors" for="Name"> Name <span class="span">*</span></label>
+						<input type="Name" id="Name" class="form-control-lg width input" placeholder="Enter your name" required="Please input your name"/>
+					</div>
+					
+					<div class="form-outline mb-4">
+						<label class="form-label colors" for="Email" style="margin-top: 24px;"> Email <span class="span">*</span></label>
+						<input type="Email" id="Email" class="form-control-lg width input" placeholder="Enter your email" required="Please input your email"/>
+					</div>
+
+					<div class="form-outline mb-4">
+						<label class="form-label colors" for="password" style="margin-top: 24px;"> Password <span class="span">*</span></label>
+						<input type="password" id="password" class="form-control-lg width input" placeholder="Create your password" required="Please input your password"/>
+						<span toggle="#password" class="fa fa-fw fa-eye field-icon-cus toggle-password-cus"></span>
+					</div>
+					<p class="tegP"> Must be at least 8 characters.</p>
+
+					<button class="btn btn-lg  btn-block btnlogin width button"> Sign in </button>
+					<button class="btn btn-lg btn-block btnSignup width button"
+						type="submit"><i class="me-2"></i>
+						<span class="span">
+							<svg style="margin-top: -4px;margin-right: 12.4px;" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M19.6 10.2273C19.6 9.51825 19.5364 8.83643 19.4182 8.18188H10V12.0501H15.3818C15.15 13.3001 14.4455 14.3592 13.3864 15.0682V17.5773H16.6182C18.5091 15.8364 19.6 13.2728 19.6 10.2273Z" fill="#4285F4"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0001 19.9999C12.7001 19.9999 14.9637 19.1044 16.6183 17.5772L13.3864 15.0681C12.491 15.6681 11.3455 16.0226 10.0001 16.0226C7.39554 16.0226 5.19099 14.2635 4.40463 11.8999H1.06372V14.4908C2.70918 17.759 6.09099 19.9999 10.0001 19.9999Z" fill="#34A853"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M4.40455 11.8999C4.20455 11.2999 4.09091 10.659 4.09091 9.99994C4.09091 9.34085 4.20455 8.69994 4.40455 8.09994V5.50903H1.06364C0.386364 6.85903 0 8.38631 0 9.99994C0 11.6136 0.386364 13.1409 1.06364 14.4909L4.40455 11.8999Z" fill="#FBBC05"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0001 3.97727C11.4683 3.97727 12.7864 4.48182 13.8228 5.47273L16.691 2.60455C14.9592 0.990909 12.6955 0 10.0001 0C6.09099 0 2.70918 2.24091 1.06372 5.50909L4.40463 8.1C5.19099 5.73636 7.39554 3.97727 10.0001 3.97727Z" fill="#EA4335"/>
+							</svg>
+						</span> 
+						Sign up with Google
+					</button>
+					<button class="btn btn-lg btn-block btnSignup width button"
+						type="submit"><i class="me-2"></i>
+						<span class="span">
+							<svg style="margin-top: -4px; margin-right: 18px;" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_10_9308)">
+								<rect width="20" height="20" rx="10" fill="#1877F2"/>
+								<path d="M13.8926 12.8906L14.3359 10H11.5625V8.12422C11.5625 7.3334 11.95 6.5625 13.1922 6.5625H14.4531V4.10156C14.4531 4.10156 13.3088 3.90625 12.2146 3.90625C9.93047 3.90625 8.4375 5.29063 8.4375 7.79688V10H5.89844V12.8906H8.4375V19.8785C8.94668 19.9584 9.46836 20 10 20C10.5316 20 11.0533 19.9584 11.5625 19.8785V12.8906H13.8926Z" fill="white"/>
+								</g>
+								<defs>
+								<clipPath id="clip0_10_9308">
+								<rect width="20" height="20" rx="10" fill="white"/>
+								</clipPath>
+								</defs>
+							</svg>                                        
+						</span> 
+						Sign up with Facebook
+					</button>
+					<p class="tegP2"> Already have an account? <a class="a"> Log in </a></p>
+				</div>
+			<!-- </div> -->
+		</div>
+	</div>
+	<!-- Contact us -->
+	<div class="modal-contact-us">
+		<div class="modal-content-contact-us">
+			<!-- <div class="card"> -->
+				<div class="card-body createnewacc" >
+					<h2 style="color: #245EE0;"> Contact Us </h2>
+					<p style="margin-bottom: 32px;"> Our friendly team would love to here from you! </p>
+
+					<div class="form-outline mb-4">
+						<label class="form-label colors" for="Firstname"> First name <span class="span">*</span></label>
+						<input type="text" id="Firstname" class="form-control-lg width input" placeholder="Enter your name"/>
+					</div>
+					
+					<div class="form-outline mb-4">
+						<label class="form-label colors" for="Lastname" style="margin-top: 24px;"> Last name <span class="span">*</span></label>
+						<input type="text" id="Lastname" class="form-control-lg width input" placeholder="Enter your Lastname"/>
+					</div>
+
+					<div class="form-outline mb-4">
+						<label class="form-label colors" for="Email" style="margin-top: 24px;"> Email <span class="span">*</span></label>
+						<input type="email" id="Email" class="form-control-lg width input" placeholder="sakaba@gmail.com"/>
+					</div>
+
+					<div class="form-outline mb-4">
+						<label class="form-label colors" for="Message" style="margin-top: 24px;"> Message <span class="span">*</span></label>
+						<textarea type="text" id="Message" class="form-control-lg width input" cols="51.8" rows="10" placeholder="Write your message here!"></textarea>
+					</div>
+					<div style="margin-left: 150px;">
+					<button class="btn btn-lg text-center send"><span class="fa fa-send"></span>Send</button>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</div>
+    <script>
+		$(document).ready(function(){
+			imagedetail();
+			footbar();
+		})
+
+		function boxdetail(){
+			var Price = document.getElementById("detail-select");
+			if (Price.style.display === "none") {
+				Price.style.display = "block";
+			} else {
+				Price.style.display = "none";
+			}
+		}
+        //append get path from urls passing img id.
+		function imagedetail(){
+			$("#img").html("")
+			$("#Head").html("")
+			var queryString = window.location.search;
+			$("#img").append(
+			'<div><p style="color:#245EE0;"><b>women</b><span>&nbsp;&nbsp;>&nbsp;&nbsp;'+queryString.slice(22)+'</span></p><img src="'+queryString.slice(7)+'" width="400" hegit="500"/></div>'
+			);
+			$("#Head").append('<h2>'+queryString.slice(22)+'</h2>')
+		}
+
+		//function put small image to under big image. 
+		function footbar(){
+			$('#footbar').append(
+				'<div class="row contain-pic">'+
+				'<div class="col-lg-2">'+
+					'<a href="#" onclick="ON(1)"><img src="image/NewWomen/1.svg" width="60" height="69" class="img-color"></a>'+
+				'</div>'+
+				'<div class="col-lg-2">'+
+					'<a href="#" onclick="ON(2)"><img src="image/NewWomen/2.svg" width="60" height="69" class="img-color"></a>'+
+				'</div>'+
+				'<div class="col-lg-2">'+
+					'<a href="#" onclick="ON(3)"><img src="image/NewWomen/3.svg" width="60" height="69" class="img-color"></a>'+
+				'</div>'+
+				'<div class="col-lg-2">'+
+					'<a href="#" onclick="ON(4)"><img src="image/NewWomen/4.svg" width="60" height="69" class="img-color"></a>'+
+				'</div>'+
+				'<div class="col-lg-2">'+
+					'<a href="#" onclick="ON(5)"><img src="image/NewWomen/5.svg" width="60" height="69" class="img-color"></a>'+
+				'</div>'+
+				'<div class="col-lg-2">'+
+					'<a href="#" onclick="ON(6)"><img src="image/NewWomen/6.svg" width="60" height="69" class="img-color"></a>'+
+				'</div>'+	
+			'</div>'
+			)
+		}
+
+		//ON function change image detail.
+		function ON(num){
+			var path = "image/NewWomen/" + num +".svg"
+        	$("#img").html('');
+        	$("#Head").html('');
+			$("#img").append(
+				'<div>'+
+					'<p style="color:#245EE0;">'+
+						'<b>women</b><span>&nbsp;&nbsp;>&nbsp;&nbsp;'+num+'</span>'+
+					'</p>'+
+					'<img style="margin-left: -3px;" src="'+path+'" width="404" height="500">'+
+				'</div>')
+			$("#Head").append('<h2>'+num+'</h2>')
+		}
+
+
+		// log in modal
+		var modal = document.querySelector(".modal-new");
+		var trigger = document.querySelector(".trigger-new");
+
+		function toggleModal() {
+			modal.classList.toggle("show-modal-new");
+		}
+
+		function windowOnClick(event) {
+			if (event.target === modal) {
+				toggleModal();
+			}
+		}
+
+		trigger.addEventListener("click", toggleModal);
+		window.addEventListener("click", windowOnClick);
+
+		//sign up modal
+		var modal_sign_up = document.querySelector(".modal-sign-up");
+		var trigger_sign_up = document.querySelector(".trigger-sign-up");
+
+		function toggleModal_signup() {
+			modal_sign_up.classList.toggle("show-modal-sign-up");
+		}
+
+		function windowOnClick_signup(event) {
+			if (event.target === modal_sign_up) {
+				toggleModal_signup();
+			}
+		}
+
+		trigger_sign_up.addEventListener("click", toggleModal_signup);
+		window.addEventListener("click", windowOnClick_signup);
+		
+		//contact us modal
+		var modal_contact_us = document.querySelector(".modal-contact-us");
+		var trigger_contact_us = document.querySelector(".trigger-contact-us");
+
+		function toggleModal_contactus() {
+			modal_contact_us.classList.toggle("show-modal-contact-us");
+		}
+
+		function windowOnClick_contactus(event) {
+			if (event.target === modal_contact_us) {
+				toggleModal_contactus();
+			}
+		}
+
+		trigger_contact_us.addEventListener("click", toggleModal_contactus);
+		window.addEventListener("click", windowOnClick_contactus);
+
+		// hide pass on create and login
+		$(".toggle-password-cus").click(function() {
+
+			$(this).toggleClass("fa-eye fa-eye-slash");
+			var input = $($(this).attr("toggle"));
+
+			if (input.attr("type") == "password") {
+				input.attr("type", "text");
+			} else {
+				input.attr("type", "password");
+			}
+		});
+
+		function LogIn(){
+			var LogInPassword = $("#LogInPassword").val();
+			var LogInEmail = $("#LogInEmail").val();
+			var pass = "admin";
+			var email = "admin@gmail.com"
+
+			if(LogInEmail != email){
+				msg("Email");
+			} else if(LogInPassword!=pass){
+				msg("Password");
+			} else if(LogInEmail == email && LogInPassword==pass) {
+				Swal.fire({
+				title: LogInEmail,
+				text: "You password is : " + LogInPassword,
+				icon: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'Yes, correct!'
+				}).then((result) => {
+					if (result.isConfirmed) {
+						const Toast = Swal.mixin({
+							toast: true,
+							position: 'top-end',
+							showConfirmButton: false,
+							timer: 3000,
+							timerProgressBar: true,
+							didOpen: (toast) => {
+								toast.addEventListener('mouseenter', Swal.stopTimer)
+								toast.addEventListener('mouseleave', Swal.resumeTimer)
+							}
+						})
+
+						Toast.fire({
+							icon: 'success',
+							title: 'Loged in successfully'
+						})
+					}
+				})
+			}	
+		}
+
+		function msg(para){
+			const Toast = Swal.mixin({
+			toast: true,
+			position: 'top-end',
+			showConfirmButton: false,
+			timer: 3000,
+			timerProgressBar: true,
+			didOpen: (toast) => {
+				toast.addEventListener('mouseenter', Swal.stopTimer)
+				toast.addEventListener('mouseleave', Swal.resumeTimer)
+			}
+			})
+
+			Toast.fire({
+				icon: 'warning',
+				title: para +' is invalid!' 
+			})
+		}
+
+
+		///////////////////////////////////////////////
+		(function() {
+ 
+			window.inputNumber = function(el) {
+
+			var min = el.attr('min') || false;
+			var max = el.attr('max') || false;
+
+			var els = {};
+
+			els.dec = el.prev();
+			els.inc = el.next();
+
+			el.each(function() {
+				init($(this));
+			});
+
+				function init(el) {
+
+					els.dec.on('click', decrement);
+					els.inc.on('click', increment);
+
+					function decrement() {
+					var value = el[0].value;
+					value--;
+					if(!min || value >= min) {
+						el[0].value = value;
+					}
+					}
+
+					function increment() {
+					var value = el[0].value;
+					value++;
+					if(!max || value <= max) {
+						el[0].value = value++;
+					}
+					}
+				}
+			}
+			})();
+
+			inputNumber($('.input-number'));
+    </script>
+    
+</body>
+</html>
